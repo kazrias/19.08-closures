@@ -1,4 +1,3 @@
-'use strict'
 let privateVariable = (val = 0) => {
     let _privateVar = val
     return {
@@ -6,3 +5,4 @@ let privateVariable = (val = 0) => {
         set() { newVal => _privateVar = newVal }
     }
 }
+
