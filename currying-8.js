@@ -1,8 +1,14 @@
+//Implement a currying function using closures
+
+function add(x, y, z) {
+    return x + y + z
+}
+
 function curry(func) {
     return function curried(...args) {
         let argsLen = args.length;
-        let funcLen = func.length;
-        if (argsLen >= funcLen) {
+        let funcLen = func.length
+        if (args.length >= func.length) {
             return func(...args)
         }
         return function (...otherArgs) {
@@ -10,8 +16,3 @@ function curry(func) {
         }
     }
 }
-function add(x, y, z) {
-    return x + y + z
-}
-let curried = curry(add);
-console.log(curried(1)(2)(3));
