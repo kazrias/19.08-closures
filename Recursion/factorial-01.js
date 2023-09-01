@@ -5,4 +5,3 @@ function factorial(n) {
         return 'number should be positive'
     return n === 0 || n === 1 ? 1 : n * factorial(n - 1)
 }
-console.log(factorial(3));
